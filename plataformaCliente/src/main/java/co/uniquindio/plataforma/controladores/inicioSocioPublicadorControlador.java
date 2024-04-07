@@ -8,20 +8,26 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import lombok.Getter;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.ArrayList;
+import java.util.List;
 
 public class inicioSocioPublicadorControlador {
     @FXML
     private ComboBox comboIdiomas;
     @FXML
-    private Button btnCargar;
+    private Button btnCargar,btnAnadido;
     @FXML
     private TextArea textArea;
 
     private Stage stage;
+
+    @Getter
+    private List<String> fileData = new ArrayList<>();
 
     private final PlataformaCliente plataformaCliente = new PlataformaCliente();
     @FXML
@@ -42,10 +48,8 @@ public class inicioSocioPublicadorControlador {
         // Si un archivo es seleccionado, hacer algo con él
         if (selectedFile != null) {
             try {
-                // Leer el contenido del archivo
-                String content = new String(Files.readAllBytes(selectedFile.toPath()));
-                // Mostrar el contenido en el TextArea
-                textArea.setText(content);
+                List<String> lines = Files.readAllLines(selectedFile.toPath());
+                fileData.addAll(lines);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -54,7 +58,13 @@ public class inicioSocioPublicadorControlador {
         }
     }
 
+
+    public void irAnadido(ActionEvent event){
+        textArea.setText(fileData.get(0));
+        }
+
     public void setStage(Stage stage) {
         this.stage = stage;
     }
 }
+
