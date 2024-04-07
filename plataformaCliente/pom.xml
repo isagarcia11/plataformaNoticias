@@ -20,7 +20,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>C:\Users\Isabella García\IdeaProjects\plataformaCliente\src\main\java\co\uniquindio\plataforma\app\PlataformaApp1.java</mainClass>
+                    <mainClass>C:\Users\Isabella García\IdeaProjects\ProyectoPlataformaNoticias\plataformaNoticias\plataformaCliente\src\main\java\co\uniquindio\plataforma\app\PlataformaApp1.java</mainClass>
                 </configuration>
             </plugin>
         </plugins>
