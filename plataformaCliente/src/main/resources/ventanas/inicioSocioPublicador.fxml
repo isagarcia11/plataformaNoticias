@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="268.0" prefWidth="403.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.plataforma.controladores.inicioSocioPublicadorControlador">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/UQINICIO.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnCargar" layoutX="34.0" layoutY="108.0" mnemonicParsing="false" onAction="#cargarContenido" prefHeight="25.0" prefWidth="152.0" text="CARGAR CONTENIDO">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="comboIdiomas" editable="true" layoutX="213.0" layoutY="26.0" prefHeight="25.0" prefWidth="165.0" promptText="SELECCIONAR IDIOMA" />
+      <TextArea fx:id="textArea" layoutX="213.0" layoutY="108.0" prefHeight="126.0" prefWidth="165.0" />
+   </children>
+</AnchorPane>
