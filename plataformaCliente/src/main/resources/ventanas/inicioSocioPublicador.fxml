@@ -5,24 +5,39 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="383.0" prefWidth="403.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.plataforma.controladores.inicioSocioPublicadorControlador">
+<AnchorPane prefHeight="544.0" prefWidth="942.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.plataforma.controladores.inicioSocioPublicadorControlador">
    <children>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-14.0" pickOnBounds="true" preserveRatio="true">
+      <TableView layoutX="27.0" layoutY="177.0" prefHeight="309.0" prefWidth="441.0">
+         <columns>
+            <TableColumn fx:id="titulo" prefWidth="75.0" text="TITULO" />
+            <TableColumn fx:id="publicador" prefWidth="85.0" text="PUBLICADOR" />
+            <TableColumn fx:id="fecha" prefWidth="102.0" text="FECHA" />
+            <TableColumn prefWidth="178.0" text="CONTENIDO" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="371.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagenes/UQINICIO.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnCargar" layoutX="34.0" layoutY="108.0" mnemonicParsing="false" onAction="#cargarContenido" prefHeight="25.0" prefWidth="152.0" text="CARGAR CONTENIDO">
+      <Button fx:id="btnCargar" layoutX="34.0" layoutY="108.0" mnemonicParsing="false" onAction="#cargarContenido" prefHeight="25.0" prefWidth="178.0" text="CARGAR CONTENIDO TXT">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <ComboBox fx:id="comboIdiomas" editable="true" layoutX="213.0" layoutY="26.0" prefHeight="25.0" prefWidth="165.0" promptText="SELECCIONAR IDIOMA" />
-      <Button fx:id="btnAnadido" layoutX="220.0" layoutY="108.0" mnemonicParsing="false" onAction="#irAnadido" prefHeight="25.0" prefWidth="152.0" text="CONTENIDO AÑADIDO">
+      <Button fx:id="btnAnadido" layoutX="461.0" layoutY="108.0" mnemonicParsing="false" onAction="#irAnadido" prefHeight="25.0" prefWidth="178.0" text="VER CONTENIDO AÑADIDO">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <TextArea layoutX="220.0" layoutY="144.0" prefHeight="201.0" prefWidth="152.0" />
+      <Button fx:id="btnXML" layoutX="248.0" layoutY="108.0" mnemonicParsing="false" onAction="#cargarXML" prefHeight="25.0" prefWidth="178.0" text="CARGAR CONTENIDO XML">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnAtras" layoutX="434.0" layoutY="504.0" mnemonicParsing="false" onAction="#atras" prefHeight="25.0" prefWidth="74.0" text="ATRÁS">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TextArea fx:id="textArea" layoutX="492.0" layoutY="177.0" prefHeight="309.0" prefWidth="422.0" wrapText="true" />
    </children>
 </AnchorPane>
