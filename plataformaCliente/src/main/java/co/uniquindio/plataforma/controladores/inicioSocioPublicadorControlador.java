@@ -35,7 +35,7 @@ public class inicioSocioPublicadorControlador {
     @FXML
     private Button btnAtras;
     @FXML
-    private Button btnCargar,btnAnadido,btnXML;
+    private Button btnCargar,btnAnadido;
 
     @FXML
     private TextField txtArea;
