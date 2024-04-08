@@ -45,7 +45,7 @@ public class PlataformaCliente {
 
         } catch (Exception e) {
             e.printStackTrace();
-        }git
+        }
     }
 
     public ArrayList<Noticias> listarNoticias() throws RuntimeException {
